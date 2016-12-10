@@ -8,8 +8,12 @@ GlassBlower v2
 Fist steps:
 
 ```
+pip install glassblower
+```
+
+```
 In the directory where you want to do the project
-$python glassblower.py
+$glassblower new project
 
 $cd project
 
