@@ -638,10 +638,12 @@ def main():
     	make_project(args.project)
     	print('project created')
     	print('1) cd %s' % args.project)
-    	print('2) pip install -r requirements.txt')
-    	print('3) python wsgi.py')
+    	print('2) virtualenv venv')
+    	print('3) source venv/bin/activate')
+    	print('4) pip install -r requirements.txt')
+    	print('5) python wsgi.py')
     else:
-    	print('parametros incorrectos use new appname')
+    	print('Incorrect parameters use: new appname')
 
 if __name__ == '__main__':
     import sys
