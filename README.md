@@ -6,36 +6,36 @@ GlassBlower v2
 ###### GlassBlower is an implementation based on the Rails style
 
 Fist steps:
-
 ```
 pip install glassblower
 ```
-
-```
 In the directory where you want to do the project
-$glassblower new project
-
-$cd project
-
-#in your current directory, to generate the virtual envairoment
+```
+$ glassblower new project
+$ cd project
+```
+In your current directory, to generate the virtual envairoment
+and install de Flask-Libs
+```
 $ virtualenv venv
-
 $ source venv/bin/activate
-
-#this file contain Flask-libs
 $ pip install -r requirements.txt 
+```
 
-#(optional)start database
+Start database
+```
 $ python manage.py db init 
-
-#(require 4) first migrate
 $ python manage.py db migrate 
-
-#(require 5) update database
 $ python manage.py db upgrade 
+```
 
-#for run the server, is like django manage.py
+for run the server in development like django
+```
 $ python manage.py runserver 
+```
+or for production 
+```
+$ python wsgi.py
 ```
 
 1. Config database and enviroment work: <br>
