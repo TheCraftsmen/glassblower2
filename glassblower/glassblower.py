@@ -311,7 +311,7 @@ glassblower_structure = {
 				'function': [],
 				'classes': [],
 				'content': [
-					'/,Index,index',
+					'/,Index,index\n',
 					'/about,About,about'
 				],
 				'main': False,
@@ -409,7 +409,7 @@ glassblower_structure = {
 				'manager.add_command("runserver", server)'
 			],
 			'main': True,
-			'main_content': ['manage.run()']	
+			'main_content': ['manager.run()']	
 		},
 		{
 			'type': 'file',
@@ -557,7 +557,10 @@ def make_project(NAME):
 								for row_class_func in row_class['function']:
 									nf.write("\n\tdef %s(self%s):\n" % (row_class_func['name'], make_string_parameters(row_class_func['parameters'])))
 									nf.write("\t\t%s\n" % '\n'.join(row_class_func['content']))
-							nf.write("%s\n" % '\n'.join(subdir_row['content']))
+							if subdir_row['name'] == 'routes.blz':
+								nf.write("%s" % ''.join(subdir_row['content']))
+							else:
+								nf.write("%s\n" % '\n'.join(subdir_row['content']))
 							if subdir_row['main']:
 								nf.write("if __name__ == \"__main__\":\n")
 								nf.write("\t%s" % '\n'.join(subdir_row['main_content']))

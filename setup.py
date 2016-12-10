@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "glassblower",
-    version = "0.2.4",
+    version = "0.2.5",
     author = "Blas Martin Castro",
     author_email = "castro.blas.martin@gmail.com",
     description = ("The Best Flask Boilerplate Framework"),
